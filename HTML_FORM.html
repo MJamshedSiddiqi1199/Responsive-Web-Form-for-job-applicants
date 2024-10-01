@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Job Application Form</h1>
+
+      <form id="jobApplicationForm">
+        <section>
+          <h2>Personal Information</h2>
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required />
+
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            required
+            pattern="^[0-9]{10}$"
+            title="Enter a valid 10-digit phone number"
+          />
+
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="address">Address:</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            placeholder="Street Address"
+            required
+          />
+
+          <label for="city">City:</label>
+          <input type="text" id="city" name="city" required />
+
+          <label for="state">State:</label>
+          <input type="text" id="state" name="state" required />
+
+          <label for="zip">ZIP Code:</label>
+          <input
+            type="text"
+            id="zip"
+            name="zip"
+            required
+            pattern="^[0-9]{5}$"
+            title="Enter a valid 5-digit ZIP code"
+          />
+        </section>
+
+        <section>
+          <h2>Resume and Cover Letter</h2>
+          <label for="resume">Upload Resume:</label>
+          <input
+            type="file"
+            id="resume"
+            name="resume"
+            accept=".pdf,.doc,.docx"
+            required
+          />
+
+          <label for="coverLetter">Cover Letter:</label>
+          <textarea
+            id="coverLetter"
+            name="coverLetter"
+            rows="5"
+            required
+          ></textarea>
+        </section>
+
+        <section>
+          <h2>Education</h2>
+          <label for="educationLevel">Highest Level of Education:</label>
+          <select id="educationLevel" name="educationLevel" required>
+            <option value="">Select</option>
+            <option value="High School">High School</option>
+            <option value="Associate">Associate Degree</option>
+            <option value="Bachelor">Bachelor's Degree</option>
+            <option value="Master">Master's Degree</option>
+            <option value="Doctorate">Doctorate</option>
+          </select>
+
+          <label for="schoolName">School/University Name:</label>
+          <input type="text" id="schoolName" name="schoolName" required />
+
+          <label for="major">Major/Area of Study:</label>
+          <input type="text" id="major" name="major" required />
+
+          <label for="graduationYear">Graduation Year:</label>
+          <input
+            type="number"
+            id="graduationYear"
+            name="graduationYear"
+            min="1900"
+            max="2100"
+            required
+          />
+        </section>
+
+        <section>
+          <h2>Employment History</h2>
+          <label for="jobTitle">Previous Job Titles:</label>
+          <input type="text" id="jobTitle" name="jobTitle" required />
+
+          <label for="companyName">Company Name:</label>
+          <input type="text" id="companyName" name="companyName" required />
+
+          <label for="employmentDates">Employment Dates:</label>
+          <input
+            type="text"
+            id="employmentDates"
+            name="employmentDates"
+            required
+          />
+
+          <label for="jobResponsibilities">Job Responsibilities:</label>
+          <textarea
+            id="jobResponsibilities"
+            name="jobResponsibilities"
+            rows="3"
+            required
+          ></textarea>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+          <label for="skills">Relevant Skills:</label>
+          <textarea id="skills" name="skills" rows="3" required></textarea>
+
+          <label for="certifications">Certifications:</label>
+          <textarea
+            id="certifications"
+            name="certifications"
+            rows="3"
+          ></textarea>
+        </section>
+
+        <section>
+          <h2>Availability</h2>
+          <label for="startDate">Start Date:</label>
+          <input type="date" id="startDate" name="startDate" required />
+
+          <label for="relocation">Willingness to Relocate:</label>
+          <input type="checkbox" id="relocation" name="relocation" />
+
+          <label for="workSchedule">Preferred Work Schedule:</label>
+          <select id="workSchedule" name="workSchedule" required>
+            <option value="">Select</option>
+            <option value="Full Time">Full Time</option>
+            <option value="Part Time">Part Time</option>
+            <option value="Flexible">Flexible</option>
+          </select>
+        </section>
+
+        <section>
+          <h2>References</h2>
+          <label for="referenceName">Reference Name:</label>
+          <input type="text" id="referenceName" name="referenceName" required />
+
+          <label for="referenceContact">Reference Contact Information:</label>
+          <input
+            type="text"
+            id="referenceContact"
+            name="referenceContact"
+            required
+          />
+
+          <label for="relationship">Relationship to Applicant:</label>
+          <input type="text" id="relationship" name="relationship" required />
+        </section>
+
+        <section>
+          <h2>Additional Questions</h2>
+          <label for="whyCompany"
+            >Why do you want to work for this company?</label
+          >
+          <textarea
+            id="whyCompany"
+            name="whyCompany"
+            rows="4"
+            required
+          ></textarea>
+        </section>
+
+        <section>
+          <h2>Consent and Agreement</h2>
+          <label>
+            <input type="checkbox" id="terms" name="terms" required /> I agree
+            to the terms and conditions
+          </label>
+
+          <label>
+            <input type="checkbox" id="privacy" name="privacy" required /> I
+            acknowledge the privacy policy
+          </label>
+        </section>
+
+        <button type="submit" id="submitBtn">Submit Application</button>
+      </form>
+
+      <div id="Appdata" class="application-table"></div>
+    </div>
+
+    <script src="Javascript.js"></script>
+  </body>
+</html>
